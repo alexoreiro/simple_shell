@@ -1,9 +1,23 @@
+## README FILE
+## Project 0x00. C - Hello, World.
+## Pre-requirements 
+Allowed editors: vi, vim, emacs
+All your files will be compiled on Ubuntu 14.04 LTS
+Your C programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+All your files should end with a new line
+A README.md file, at the root of the folder of the project is mandatory
+Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+Your shell should not have any memory leaks
+No more than 5 functions per file
+All your header files should be include guarded
+## Versioned 
+Compiled on Ubuntu 14.04 LTS using gcc 4.8.4.
 ## uru_shell - a simple shell
 uru_shell is a simple command line shell for OS X and Linux. uru_shell includes most basic features present in the bash shell. This shell was built as a project for Holberton School.
 ## Quick Start and Installation
 uru_shell works like any other shell, like bash.
 
-uru_shell builds successfully with a GCC 4.8.4 compiler or later. uru_shell can compile using gcc 4.8.4 -Wall -Werror -Wextra -pedantic *.c -o uru_shell.
+uru_shell builds successfully with a GCC 4.8.4 compiler or later. uru_shell can compile using gcc | 4.8.4 -Wall -Werror -Wextra -pedantic *.c -o uru_shell. |
 
 ## To start up uru_shell, simply type
 
@@ -57,11 +71,15 @@ There are several builtins programmed into the uru_shell. Below is a description
 To print out a list of all the environmental variables, the builtin env can be used. Each environmental variable and its value is printed out with a syntax of key=value. Each variable is separated by a new line.
 
 env
-exit
+
+## exit
+
 To exit out of the shell, the user may use the exit builtin.
 
-exit
+## exit
+
 Exiting commands and uru_shell
+
 To exit out of a process or command, ctrl c is used. Control-C interrupts a process and causes it to abort.
 
-To exit out of the uru_shell, the user can do one of the following, ctrl D or exit . When exiting with ctrl D, an exit status of 0 is given
+To exit out of the uru_shell, the user can do one of the following, ctrl D or exit . When exiting with ctrl D, an exit status of 0 is given.
