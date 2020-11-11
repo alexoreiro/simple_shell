@@ -1,5 +1,5 @@
-#ifndef HOLBERTON
-#define HOLBERTON
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 #include <stdarg.h>
 #include <sys/wait.h>
