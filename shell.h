@@ -11,7 +11,7 @@
 #include <signal.h>
 extern char **environ;
 /**
- * struct list_s - singly linked list
+* struct list_s - singly linked list
  * @str: points to the string
  * @len: points to the length
  * @next: points to the next node
