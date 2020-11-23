@@ -40,7 +40,7 @@ void cpy_str(int end, char *s, char **word_box);
 char *str_concat(char *s1, char *s2);
 void check_path(char **string, char **env);
 void signal_handler(int signo);
-void _exit(char *, int status);
+void e_exit(char *, int status);
 int prompt(char **ptr);
 int _atoi(char *s);
 #endif
