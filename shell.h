@@ -41,12 +41,14 @@ int prompt(char **ptr);
 void signal_handler(int signo);
 
 /* Function to string manipulation */
-char **strtow(char *str);
+char **strtoken(char *str);
 int word_count(char *str);
 void get_word(char **words, char *str);
 void cpy_str(int end, char *s, char **word_box);
 void check_path(char **string, char **env);
 char *_getenv(const char *name, char **env);
 char *str_concat(char *s1, char *s2);
+int _strlen(char *s);
+void exit(char *argv, int status);
 
 #endif
