@@ -19,8 +19,17 @@ int main(int argc, char *argv[], char **env)
 	while (1)
 	{
 		ptr = NULL;
+        signal(SIGINT, signal_handler);
 		if (prompt(&ptr) == -1)
 			continue;
+
+        string = strtow(ptr);
+		if (!string)
+		{
+			free_cptrn(99, 1, ptr);
+			continue;
+		}
+		free_cptrn(99, 1, ptr);
 
 		if (shell_built(string, env))
 			continue;
@@ -41,11 +50,14 @@ int prompt(char **ptr)
 	int len;
 
 	if (isatty(STDIN_FILENO))
-		write(STDOUT_FILENO, "~$ ", 6);
+		write(STDOUT_FILENO, "~$ ", 3);
+
 	len = getline(ptr, &size, stdin);
+
 	if (len == EOF)
 		free_cptrn(-1, 1, *ptr);
 	(*ptr)[len - 1] = '\0';
+
 	if (*(*ptr) == '\0' || (*(*ptr) == '.' && (*ptr)[1] == '\0'))
 	{
 		free_cptrn(99, 1, *ptr);

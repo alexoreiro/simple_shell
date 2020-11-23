@@ -37,4 +37,13 @@ void free_cptrn(int status, const unsigned int n, ...);
 /* Function to print prompt */
 int prompt(char **ptr);
 
+/* Function to signal handler */
+void signal_handler(int signo);
+
+/* Function to string manipulation */
+char **strtow(char *str);
+int word_count(char *str);
+void get_word(char **words, char *str);
+void cpy_str(int end, char *s, char **word_box);
+
 #endif
