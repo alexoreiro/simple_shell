@@ -50,5 +50,6 @@ char *_getenv(const char *name, char **env);
 char *str_concat(char *s1, char *s2);
 int _strlen(char *s);
 void exit(char *argv, int status);
+int main(int argc, char *argv[], char **env);
 
 #endif
