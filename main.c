@@ -19,22 +19,19 @@ int main(int argc, char *argv[], char **env)
 	while (1)
 	{
 		ptr = NULL;
-        signal(SIGINT, signal_handler);
+		signal(SIGINT, signal_handler);
 		if (prompt(&ptr) == -1)
 			continue;
-
-        string = strtow(ptr);
+		string = strtow(ptr);
 		if (!string)
 		{
 			free_cptrn(99, 1, ptr);
 			continue;
 		}
 		free_cptrn(99, 1, ptr);
-
 		if (shell_built(string, env))
 			continue;
-
-        parent = fork();
+		parent = fork();
 		if (parent == 0)
 		{
 			check_path(string, env);
@@ -52,7 +49,6 @@ int main(int argc, char *argv[], char **env)
 				break;
 		}
 	}
-
 	return (0);
 }
 

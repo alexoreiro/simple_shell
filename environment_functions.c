@@ -25,4 +25,4 @@ char *_getenv(const char *name, char **env)
 		i++;
 	}
 	return (NULL);
-} 
+}
