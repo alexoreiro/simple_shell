@@ -34,7 +34,25 @@ int main(int argc, char *argv[], char **env)
 		if (shell_built(string, env))
 			continue;
 
+        parent = fork();
+		if (parent == 0)
+		{
+			check_path(string, env);
+			if (execve(string[0], string, NULL) == -1)
+			{
+				perror(*argv);
+				free_array(string);
+				exit(0);
+			}
+		}
+		else
+		{
+			free_array(string);
+			if (!wait(&status))
+				break;
+		}
 	}
+
 	return (0);
 }
 
