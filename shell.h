@@ -9,6 +9,7 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <signal.h>
+#include <stdarg.h>
 /**
  * struct builtins - builtin command and functions for shell
  * @cmd: cmd name
@@ -19,8 +20,9 @@
 
 typedef struct builtins
 {
-  char *cmd;
-  int (*f)(char **args, char **env);
+	char *cmd;
+	int (*f)(char **args, char **env);
+
 } built_t;
 
 /* Function Declarations for builtin shell commands */
@@ -28,9 +30,11 @@ int shell_env(char **args, char **env);
 int shell_exit(char **args, char **env);
 int shell_built(char **args, char **env);
 
+/* Function Declaretion for free memory */
+void free_array(char **env_ar);
+void free_cptrn(int status, const unsigned int n, ...);
 
-
-
-
+/* Function to print prompt */
+int prompt(char **ptr);
 
 #endif
