@@ -9,4 +9,28 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <signal.h>
+/**
+ * struct builtins - builtin command and functions for shell
+ * @cmd: cmd name
+ * @f: pointer to builtin functions
+ *
+ * Description: struct for builtin functions
+ */
+
+typedef struct builtins
+{
+  char *cmd;
+  int (*f)(char **args, char **env);
+} built_t;
+
+/* Function Declarations for builtin shell commands */
+int shell_env(char **args, char **env);
+int shell_exit(char **args, char **env);
+int shell_built(char **args, char **env);
+
+
+
+
+
+
 #endif
