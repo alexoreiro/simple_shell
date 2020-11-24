@@ -7,23 +7,23 @@
  */
 void free_string(int status, const unsigned int n, ...)
 {
-unsigned int i;
-va_list args;
-char *ptr;
+	unsigned int i;
+	va_list args;
+	char *ptr;
 
-va_start(args, n);
+	va_start(args, n);
 
 
-for (i = 0; i < n; i += 1)
-{
-ptr = va_arg(args, char *);
-free(ptr);
-}
+	for (i = 0; i < n; i += 1)
+	{
+		ptr = va_arg(args, char *);
+		free(ptr);
+	}
 
-va_end(args);
-if (status == 99)
-return;
-exit(0);
+	va_end(args);
+	if (status == 99)
+		return;
+		exit(0);
 }
 
 /**
@@ -32,16 +32,16 @@ exit(0);
  */
 void free_array(char **array)
 {
-int i;
+	int i;
 
-if (!array)
-exit(0);
-i = 0;
+	if (!array)
+		exit(0);
+	i = 0;
 
-while (array[i])
-{
-free(array[i]);
-i += 1;
-}
-free(array);
+	while (array[i])
+	{
+		free(array[i]);
+		i += 1;
+	}
+	free(array);
 }
