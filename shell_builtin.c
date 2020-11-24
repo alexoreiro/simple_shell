@@ -62,7 +62,6 @@ int shell_built(char **args, char **env)
 		if (_strcmp2(args[0], b_ins[i].cmd) == 0)
 		{
 			return (b_ins[i].f(args, env));
-			break;
 		}
 	}
 	return (0);

@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * signal_manipulation - reprints prompt when signal ctrl+C is captured
- * @signo: signal number
+ * @signal: signal number
  */
 void signal_manipulation(int signal)
 {
