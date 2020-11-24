@@ -7,7 +7,7 @@
 
 void e_exit(char *argv, int status)
 {
-(void)status;
-perror(argv);
-exit(0);
+	(void)status;
+	perror(argv);
+	exit(0);
 }
