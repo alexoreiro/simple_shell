@@ -59,7 +59,7 @@ int shell_built(char **args, char **env)
 		return (0);
 	for (i = 0; i < 2; i++)
 	{
-		if (_strcmp2(args[0], b_ins[i].cmd) == 0)
+		if (_strcompare(args[0], b_ins[i].cmd) == 0)
 		{
 			return (b_ins[i].f(args, env));
 		}

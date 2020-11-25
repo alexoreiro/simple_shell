@@ -24,13 +24,13 @@ char **strtoken(char *str)
 }
 
 /**
- * cpy_str - clips a word from the string
+ * copy_string - clips a word from the string
  * @end: the end of the word
  * @s: the string to clip the word from
  * @word_box: the array to store the word in
  */
 
-void cpy_str(int end, char *s, char **word_box)
+void copy_string(int end, char *s, char **word_box)
 
 {
 	int i;

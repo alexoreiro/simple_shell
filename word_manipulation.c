@@ -62,7 +62,7 @@ void get_word(char **words, char *str)
 			}
 			if (found)
 			{
-				cpy_str(i - start, str + start, words + count);
+				copy_string(i - start, str + start, words + count);
 				if (!(words + count))
 					exit(0);
 				count += 1;
