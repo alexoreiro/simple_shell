@@ -13,8 +13,7 @@ be found in the readme file.
 .B Simple
 does not handle any option processing like bash or zsh.
 .SH ARGUMENTS
-The first argument read from standard input is assumed to be the command 
-and following arguments are its parameters.
+The first argument read from standard input is assumed to be the command and following arguments are its parameters.
 .PP
 .B Simple
 reads and executes commands from standard input, then exits.
@@ -35,20 +34,17 @@ echo hello holberton
 This will only write hello holberton to standard output.
 .PP
 .SH ENVIRONMENT
-When a program is invoked it is given an array of strings called the 
-environment. This is a list of name-value pairs, of the form name=value.
+When a program is invoked it is given an array of strings called the environment. This is a list of name-value pairs, of the form name=value.
 .PP
 The shell provides several ways to manipulate the environment. On invocation,
 the shell scans its own environment and creates a parameter for each name found
 , automatically marking it for export to child processes. Executed commands
 inherit the environment.
 .PP
-If a command is not found, the child process created to execute it returns a status of 0. 
+If a command is not found, the child process created to execute it returns a status of 0.
 .PP
 .SH SHELL BUILTIN COMMANDS
-.B Simple
-contains some builtin functions. These are listed below and do not support any
-flags.
+.B Simple contains some builtin functions. These are listed below and do not support any flags.
 .PP
 .PP
 .

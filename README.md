@@ -3,8 +3,7 @@
 
 ## Project 0x16. C - Simple Shell.
 
-
-## Pre-requirements 
+## Pre-requirements
 
 Allowed editors: vi, vim, emacs
 
@@ -25,7 +24,7 @@ No more than 5 functions per file
 All your header files should be include guarded
 
 
-## Versioned 
+## Versioned
 
 Compiled on Ubuntu 14.04 LTS using gcc 4.8.4.
 
